@@ -1,6 +1,8 @@
 import Foundation
 
+//MARK: - Class Beer
 class Beer {
+    
     let nameOfBeer: String
     let priceOfOneBottle: Double
     let nameOfBeerCounrty: String
@@ -18,7 +20,9 @@ class Beer {
     }
 }
 
+//MARK: - Singlton Class SellingOfBeer
 class SellingOfBeer {
+    
     static let shared = SellingOfBeer()
     
     func sellBeer(profit: inout Double, priceOfOneBottle: Double) -> Double {
@@ -41,8 +45,4 @@ class SellingOfBeer {
     }
     
     private init(){}
-    
-    deinit{
-        print("Deinit2")
-    }
 }
